@@ -198,7 +198,7 @@ def big_shoe_rebounds
         player = x[:player_name]
       end
     end
-      find_players_hash(player)[:player_name]
+      player
     end
 
 def winning_team
@@ -222,7 +222,7 @@ def player_with_longest_name
       player = x[:player_name]
     end
   end
-    find_players_hash(player)[:player_name]
+    player
   end
 
   def player_with_most_steals # helper function to find player with most steals
@@ -234,7 +234,7 @@ def player_with_longest_name
         player = x[:player_name]
       end
     end
-      find_players_hash(player)[:player_name]
+      player
     end
 
 def long_name_steals_a_ton?
