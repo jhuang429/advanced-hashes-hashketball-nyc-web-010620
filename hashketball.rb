@@ -1,4 +1,5 @@
 # Write your code here!
+require "pry"
 
 def game_hash
   result = {
@@ -124,6 +125,7 @@ slam_dunks: 1
   result
 end
 
+<<<<<<< HEAD
 def all_players #helper function to compile all players from both away and home teams
   all_players_in_game = []
   game_hash[:home][:players].each do |x| all_players_in_game.push(x) end
@@ -133,15 +135,31 @@ end
 
 
 def find_players_hash(player) #helper function to find the hash of a player
+=======
+def all_players
+  all_players_in_game = []
+  all_players_in_game.push(game_hash[:home][:players])
+  all_players_in_game.push(game_hash[:away][:players])
+  all_players_in_game
+end
+
+binding.pry
+
+def find_players_hash(player)
+>>>>>>> 42bbb73eb72a206c65b76efb40bea8e00d73f54d
   result = {}
   all_players.each do |x|
     if x[:player_name] == player
       return result = x
+<<<<<<< HEAD
     end
+=======
+>>>>>>> 42bbb73eb72a206c65b76efb40bea8e00d73f54d
   end
   result
 end
 
+<<<<<<< HEAD
 def num_points_scored(player)
   find_players_hash(player)[:points]
 end
@@ -240,3 +258,14 @@ def player_with_longest_name
 def long_name_steals_a_ton?
   player_with_longest_name == player_with_most_steals
 end
+=======
+binding.pry
+
+def num_points_scored(player)
+  binding.pry
+  stats = find_players_hash(player)
+  stats[:points]
+end
+
+binding.pry
+>>>>>>> 42bbb73eb72a206c65b76efb40bea8e00d73f54d
